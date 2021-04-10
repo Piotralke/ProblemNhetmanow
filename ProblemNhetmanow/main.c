@@ -38,27 +38,33 @@ void free_ptr(char** array, int size)
 
 void fill_with_hetman(char** array, int size)
 {
-	int counter = 0;
-	
-	for (int i = 0;i < size;i++)
-	{
-		for (int j = 0;j < size;j++)
-		{
-			if (array[i][j] == 'x')
+	int counter = 0,licznik=0;
+
+	for (int xh = 0;xh < size;xh++) {
+		for (int yh = 0;yh < size;yh++) {
+			fill_array(array,size);
+			array[xh][yh] = 'H';
+			for (int i = 0;i < size;i++)
 			{
-				
+				for (int j = 0;j < size;j++)
+				{
+					if (array[i][j] == '0')
+					{
+						array[i][j] = 'H';
+						fill_with_xes(array, size, i, j);						counter++;						break;
+					}
+				}
 			}
-			else
-			{
-				array[i][j] = 'H';
-				fill_with_x(array, size, i, j);				counter++;				break;
+			if (counter == size) {
+				licznik++;
 			}
 		}
 	}
-	printf("%d", counter);
+	
+
 }
 
-void fill_with_x(char** array, int size, int i, int j)
+int fill_with_xes(char** array, int size, int i, int j)
 {
 	for (int x = i + 1;x < size;x++)	//prawo
 		array[x][j] = 'x';
@@ -93,7 +99,6 @@ int main()
 	else
 	{
 		fill_array(array, size);
-		print_array(array, size);
 		fill_with_hetman(array, size);
 		print_array(array, size);
 		free_ptr(array, size);
