@@ -1,6 +1,7 @@
 #include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <assert.h>
 
 int counter = 0;
 
@@ -111,6 +112,7 @@ int main()
 
 	int size = 0;
 	scanf("%d", &size);
+	assert(size > 0);
 	int** array = (int**)calloc(size, sizeof(int*));
 	for (int i = 0; i < size; i++)
 		array[i] = (int*)calloc(size, sizeof(int));
