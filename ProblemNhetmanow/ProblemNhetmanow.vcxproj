@@ -195,7 +195,20 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="algorytm.c" />
+    <ClCompile Include="drawing.c" />
+    <ClCompile Include="errors.c" />
+    <ClCompile Include="handle_array.c" />
+    <ClCompile Include="init_al.c" />
     <ClCompile Include="main.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="algorytm.h" />
+    <ClInclude Include="drawing.h" />
+    <ClInclude Include="errors.h" />
+    <ClInclude Include="handle_array.h" />
+    <ClInclude Include="include_lib.h" />
+    <ClInclude Include="init_al.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
