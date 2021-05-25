@@ -1,0 +1,71 @@
+\hypertarget{handle__array_8c}{}\doxysection{Dokumentacja pliku Problem\+Nhetmanow/handle\+\_\+array.c}
+\label{handle__array_8c}\index{ProblemNhetmanow/handle\_array.c@{ProblemNhetmanow/handle\_array.c}}
+{\ttfamily \#include \char`\"{}handle\+\_\+array.\+h\char`\"{}}\newline
+\doxysubsection*{Funkcje}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{handle__array_8c_a18076c68a483da15f63f30d8b2314aa5}{fill\+\_\+array}} (int $\ast$$\ast$array, int size)
+\item 
+void \mbox{\hyperlink{handle__array_8c_a81c83ac765531a13626f6f1dbe7e7419}{print\+\_\+array}} (int $\ast$$\ast$array, int size, FILE $\ast$file)
+\item 
+void \mbox{\hyperlink{handle__array_8c_a9a0418da6f0f85a96d7e7a40aa7e2535}{free\+\_\+ptr}} (int $\ast$$\ast$array, int size)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+W pliku \mbox{\hyperlink{handle__array_8c}{handle\+\_\+array.\+c}} znajdują się funkcje, które wykonują operacje na dynamicznej tablicy dwuwymiarowej (inicjacja szachownicy, zapis rozwiązań do pliku i zwalnianie pamięci) 
+
+\doxysubsection{Dokumentacja funkcji}
+\mbox{\Hypertarget{handle__array_8c_a18076c68a483da15f63f30d8b2314aa5}\label{handle__array_8c_a18076c68a483da15f63f30d8b2314aa5}} 
+\index{handle\_array.c@{handle\_array.c}!fill\_array@{fill\_array}}
+\index{fill\_array@{fill\_array}!handle\_array.c@{handle\_array.c}}
+\doxysubsubsection{\texorpdfstring{fill\_array()}{fill\_array()}}
+{\footnotesize\ttfamily void fill\+\_\+array (\begin{DoxyParamCaption}\item[{int $\ast$$\ast$}]{array,  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+Funkcja \mbox{\hyperlink{handle__array_8c_a18076c68a483da15f63f30d8b2314aa5}{fill\+\_\+array()}} inicjuje szachownicę wypełniając ją wartościami 0, które oznaczają, że miejsce na szachownicy jest puste. 
+\begin{DoxyParams}{Parametry}
+{\em array} & szachownica w postaci dynamicznej tablicy dwuwymiarowej. \\
+\hline
+{\em size} & rozmiar szachownicy. \\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii 10 pliku handle\+\_\+array.\+c.
+
+\mbox{\Hypertarget{handle__array_8c_a9a0418da6f0f85a96d7e7a40aa7e2535}\label{handle__array_8c_a9a0418da6f0f85a96d7e7a40aa7e2535}} 
+\index{handle\_array.c@{handle\_array.c}!free\_ptr@{free\_ptr}}
+\index{free\_ptr@{free\_ptr}!handle\_array.c@{handle\_array.c}}
+\doxysubsubsection{\texorpdfstring{free\_ptr()}{free\_ptr()}}
+{\footnotesize\ttfamily void free\+\_\+ptr (\begin{DoxyParamCaption}\item[{int $\ast$$\ast$}]{array,  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+Funkcja \mbox{\hyperlink{handle__array_8c_a9a0418da6f0f85a96d7e7a40aa7e2535}{free\+\_\+ptr()}} zwalnia pamięć dynamicznej tablicy dwuwymiarowej. 
+\begin{DoxyParams}{Parametry}
+{\em array} & szachownica w postaci dynamicznej tablicy dwuwymiarowej. \\
+\hline
+{\em size} & rozmiar szachownicy. \\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii 41 pliku handle\+\_\+array.\+c.
+
+\mbox{\Hypertarget{handle__array_8c_a81c83ac765531a13626f6f1dbe7e7419}\label{handle__array_8c_a81c83ac765531a13626f6f1dbe7e7419}} 
+\index{handle\_array.c@{handle\_array.c}!print\_array@{print\_array}}
+\index{print\_array@{print\_array}!handle\_array.c@{handle\_array.c}}
+\doxysubsubsection{\texorpdfstring{print\_array()}{print\_array()}}
+{\footnotesize\ttfamily void print\+\_\+array (\begin{DoxyParamCaption}\item[{int $\ast$$\ast$}]{array,  }\item[{int}]{size,  }\item[{FILE $\ast$}]{file }\end{DoxyParamCaption})}
+
+Funkcja \mbox{\hyperlink{handle__array_8c_a81c83ac765531a13626f6f1dbe7e7419}{print\+\_\+array()}} zapisuje rozwiązanie do pliku. 
+\begin{DoxyParams}{Parametry}
+{\em array} & szachownica w postaci dynamicznej tablicy dwuwymiarowej. \\
+\hline
+{\em size} & rozmiar szachownicy. \\
+\hline
+{\em file} & wskaźnik na plik do którego będzie zapisywane rozwiązanie. \\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii 24 pliku handle\+\_\+array.\+c.
+

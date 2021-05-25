@@ -1,0 +1,44 @@
+\hypertarget{index_problem_sec}{}\doxysection{Czym jest problem N Hetmanów.}\label{index_problem_sec}
+Jest to problem szachowy i matematyczny, dotyczący rozmieszczenia N hetmanów na szachownicy o wymiarach N × N. Figury muszą być rozłożone w taki sposób, aby wzajemnie się nie szachowały, czyli aby nie znajdowały się w tym samym wierszu, kolumnie, czy ukośnym rzędzie. Obok przedstawione są dwa przykładowe rozwiązania problemu dla szachownicy o wymiarach 5 × 5 oraz 4 × 4.
+
+
+\begin{DoxyInlineImage}
+\includegraphics[height=\baselineskip,keepaspectratio=true]{1.jpg}
+\end{DoxyInlineImage}
+\hypertarget{index_sposob_sec}{}\doxysection{Sposób działania algorytmu}\label{index_sposob_sec}
+Działanie algorytmu polega na tym, że w przypadku niepowodzenia (w całej następnej kolumnie nie ma żadnego wolnego miejsca) to dany hetman jest przenoszony na następne wolne pole, a jeśli nie mógłby być przesunięty dalej, to sprawdzany jest wcześniejszy hetman. Jeśli udało się przesunąć hetmana to algorytm wznawiał pracę. Po ustawieniu hetmana na planszy nadajemy temu polu wartość 1. Przy poszukiwaniu miejsca dla następnego hetmana sprawdzamy, czy to miejsce jest bezpieczne, poprzez sprawdzanie możliwych ruchów hetmana z danego miejsca w lewą stronę planszy. Poniżej przedstawiamy dwie wizualizacje naszego algorytmu.
+
+\href{https://youtu.be/qDWjeZj0Hpk}{\texttt{ Link do animacji }}
+
+W poniższej tabeli przedstawiamy wyniki działania algorytmu dla rozmiarów od 1 do 10.
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{11}{|X[-1]}|}
+\hline
+N &1 &2 &3 &4 &5 &6 &7 &8 &9 &10  \\\cline{1-11}
+Ilość rozwiązań ~\newline
+ &1 &0 &0 &2 &10 &4 &40 &92 &352 &724  \\\cline{1-11}
+\end{longtabu}
+\hypertarget{index_grafika_sec}{}\doxysection{Szata graficzna projektu}\label{index_grafika_sec}
+Implementacja biblioteki graficznej Allegro poszła po naszej myśli. Teraz na pierwszym ekranie wyświetla nam się mini menu gdzie za pomocą strzałek wybieramy rozmiar szachownicy. Następnie w oknie wyświetla się szachownica na której pokazuje się cała praca algorytmu. Hetmani w postaci księżniczki Peach przechodzą po wszystkich polach szachownicy. Na koniec wyskakuje sam Mario, który wyświetla liczbę wszystkich rozwiązań.
+
+
+\begin{DoxyInlineImage}
+\includegraphics[height=\baselineskip,keepaspectratio=true]{rozmiar.png}
+\end{DoxyInlineImage}
+ 
+\begin{DoxyInlineImage}
+\includegraphics[height=\baselineskip,keepaspectratio=true]{szachownica.png}
+\end{DoxyInlineImage}
+ 
+\begin{DoxyInlineImage}
+\includegraphics[height=\baselineskip,keepaspectratio=true]{mario.png}
+\end{DoxyInlineImage}
+\hypertarget{index_zapis_sec}{}\doxysection{Zapis rozwiązań do pliku}\label{index_zapis_sec}
+Aktualnie nasz program podczas pracy zapisuje wszystkie możliwe rozwiązania do pliku w postaci 0 i 1 gdzie 1 oznacza hetmana, a 0 puste pole.
+
+
+\begin{DoxyInlineImage}
+\includegraphics[height=\baselineskip,keepaspectratio=true]{rozwiazania.png}
+\end{DoxyInlineImage}
+ 

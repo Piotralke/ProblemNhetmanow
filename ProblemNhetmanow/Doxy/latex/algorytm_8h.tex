@@ -1,0 +1,104 @@
+\hypertarget{algorytm_8h}{}\doxysection{Dokumentacja pliku Problem\+Nhetmanow/algorytm.h}
+\label{algorytm_8h}\index{ProblemNhetmanow/algorytm.h@{ProblemNhetmanow/algorytm.h}}
+{\ttfamily \#include \char`\"{}include\+\_\+lib.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}drawing.\+h\char`\"{}}\newline
+\doxysubsection*{Definicje}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{algorytm_8h_a9b5f380ffa01877befefd2b25c80ad99}{ALGORYTM\+\_\+H}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Funkcje}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{algorytm_8h_a2f73df733efbc5dcecee2d4ec4b88b66}{is\+Safe}} (int $\ast$$\ast$board, int row, int col, int size)
+\item 
+bool \mbox{\hyperlink{algorytm_8h_a059298661b2cd1b36eb9fd29aa0af237}{solve\+Nhetman}} (int $\ast$$\ast$board, int col, int size, ALLEGRO\+\_\+\+BITMAP $\ast$hetman, FILE $\ast$file)
+\end{DoxyCompactItemize}
+\doxysubsection*{Zmienne}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{algorytm_8h_a617a47c70795bcff659815ad0efd2266}{counter}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Dokumentacja definicji}
+\mbox{\Hypertarget{algorytm_8h_a9b5f380ffa01877befefd2b25c80ad99}\label{algorytm_8h_a9b5f380ffa01877befefd2b25c80ad99}} 
+\index{algorytm.h@{algorytm.h}!ALGORYTM\_H@{ALGORYTM\_H}}
+\index{ALGORYTM\_H@{ALGORYTM\_H}!algorytm.h@{algorytm.h}}
+\doxysubsubsection{\texorpdfstring{ALGORYTM\_H}{ALGORYTM\_H}}
+{\footnotesize\ttfamily \#define ALGORYTM\+\_\+H}
+
+
+
+Definicja w linii 5 pliku algorytm.\+h.
+
+
+
+\doxysubsection{Dokumentacja funkcji}
+\mbox{\Hypertarget{algorytm_8h_a2f73df733efbc5dcecee2d4ec4b88b66}\label{algorytm_8h_a2f73df733efbc5dcecee2d4ec4b88b66}} 
+\index{algorytm.h@{algorytm.h}!isSafe@{isSafe}}
+\index{isSafe@{isSafe}!algorytm.h@{algorytm.h}}
+\doxysubsubsection{\texorpdfstring{isSafe()}{isSafe()}}
+{\footnotesize\ttfamily bool is\+Safe (\begin{DoxyParamCaption}\item[{int $\ast$$\ast$}]{board,  }\item[{int}]{row,  }\item[{int}]{col,  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+Funkcja jest przywoływana kiedy hetmany są już w kolumnach od 0 do\mbox{[}col\mbox{]} -\/ 1. Więc musimy sprawdzać tylko lewą stronę dla tych hetmanów co atakują. Funkcja sprawdza czy hetman może zostać postawiony na board\mbox{[}row\mbox{]}\mbox{[}col\mbox{]}. Funkcja jest przywoływana kiedy hetmany są już w kolumnach od 0 do \mbox{[}col\mbox{]}-\/1. Więc musimy sprawdzac tylko lewą stronę dla tych hetmanów co atakują. 
+\begin{DoxyParams}{Parametry}
+{\em board} & jest to dynamiczna tablica dwuwymiarowa reprezentująca szachownicę \\
+\hline
+{\em row} & aktualny wiersz szachownicy który jest badany \\
+\hline
+{\em col} & aktualna kolumna szachownicy która jest badana \\
+\hline
+{\em size} & rozmiar szachownicy \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+false w przypadku gdy dane pole nie będzie bezpieczne 
+
+true jeżeli pole jest bezpieczne 
+\end{DoxyReturn}
+
+
+Definicja w linii 21 pliku algorytm.\+c.
+
+\mbox{\Hypertarget{algorytm_8h_a059298661b2cd1b36eb9fd29aa0af237}\label{algorytm_8h_a059298661b2cd1b36eb9fd29aa0af237}} 
+\index{algorytm.h@{algorytm.h}!solveNhetman@{solveNhetman}}
+\index{solveNhetman@{solveNhetman}!algorytm.h@{algorytm.h}}
+\doxysubsubsection{\texorpdfstring{solveNhetman()}{solveNhetman()}}
+{\footnotesize\ttfamily bool solve\+Nhetman (\begin{DoxyParamCaption}\item[{int $\ast$$\ast$}]{board,  }\item[{int}]{col,  }\item[{int}]{size,  }\item[{ALLEGRO\+\_\+\+BITMAP $\ast$}]{hetman,  }\item[{FILE $\ast$}]{file }\end{DoxyParamCaption})}
+
+Funkcja rekurencyjna rozwiazujaca problem N hetmanow. 
+\begin{DoxyParams}{Parametry}
+{\em board} & jest to dynamiczna tablica dwuwymiarowa reprezentująca szachownicę \\
+\hline
+{\em col} & aktualna kolumna szachownicy która jest badana \\
+\hline
+{\em size} & rozmiar szachownicy \\
+\hline
+{\em hetman} & jest to wskaźnik na bitmapę z obrazkiem hetmana w postaci Księżniczki Peach \\
+\hline
+{\em file} & jest to wskaźnik na plik, do którego zapisują się pomyślne rozwiązania \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+true w przypadku jeżeli wszystkie hetmany są ustawione 
+
+false jezeli hetman nie moze zostac postawiony w zadnym wierszu w tej kolumnie 
+\end{DoxyReturn}
+
+
+Definicja w linii 53 pliku algorytm.\+c.
+
+
+
+\doxysubsection{Dokumentacja zmiennych}
+\mbox{\Hypertarget{algorytm_8h_a617a47c70795bcff659815ad0efd2266}\label{algorytm_8h_a617a47c70795bcff659815ad0efd2266}} 
+\index{algorytm.h@{algorytm.h}!counter@{counter}}
+\index{counter@{counter}!algorytm.h@{algorytm.h}}
+\doxysubsubsection{\texorpdfstring{counter}{counter}}
+{\footnotesize\ttfamily int counter}
+
+
+
+Definicja w linii 10 pliku algorytm.\+h.
+

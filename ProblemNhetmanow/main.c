@@ -1,3 +1,9 @@
+﻿/** @file main.c
+ *  Plik main.c służy do kontaktu z użytkownikiem w postaci wyboru wielkości szachownicy. Odpowiada również za inicjacje funkcji 
+ *  odpowiadających między innymi za: czcionkę, wyświetlanie elementów w tym samego display oraz występowanie błedów.
+ *
+ */
+
 #include "include_lib.h"
 #include "handle_array.h"
 #include "drawing.h"
@@ -5,6 +11,10 @@
 #include "init_al.h"
 #include "errors.h"
 
+
+/**
+ * Funkcja wait_for_keypress() czeka na wciśnięcie dowolnego klawisza przez użytkownika. Jest ona wywoływana na końcu programu po wyświetleniu łącznej liczby rozwiązań.
+ */
 void wait_for_keypress()
 {
 	ALLEGRO_EVENT_QUEUE* event_queue;
@@ -20,6 +30,12 @@ void wait_for_keypress()
 	al_destroy_event_queue(event_queue);
 }
 
+/**
+ * Funkcja main() jest główną funkcją programu. Zawarte są w niej najważniejsze inicjacje elementów potrzebnych do działania programów np: bitmap.
+ * W funkcji zawarta jest pętla while odpowiedzialna za małe menu rozmiaru szachownicy. Po pętli inicjowana jest dynamiczna tablica dwuwymiarowa zależna od wybranego przez użytkownika rozmiaru.
+ * Dalej wywoływany jest główny algorytm, a po jego zakończeniu wywoływane są funkcje niszczące i odinstalowywujące.
+ * 
+ */
 int main()
 {
 	ALLEGRO_DISPLAY* display = NULL;
@@ -99,13 +115,21 @@ int main()
 		al_destroy_display(display);
 		al_shutdown_image_addon();
 		al_uninstall_keyboard();
+		al_shutdown_primitives_addon();
 		al_destroy_event_queue(event_queue);
+		al_destroy_bitmap(hetman);
+		al_destroy_bitmap(mario);
+		al_destroy_font(font);
+		al_uninstall_system();
+		
 		if (fclose(file))
 		{
 			fprintf(stderr, "Blad zamkniecia pliku\n");
 			return -1;
 		}
 	}
+	
+	
 	
 	return 0;
 }

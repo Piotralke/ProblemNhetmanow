@@ -1,0 +1,57 @@
+\hypertarget{drawing_8h}{}\doxysection{Dokumentacja pliku Problem\+Nhetmanow/drawing.h}
+\label{drawing_8h}\index{ProblemNhetmanow/drawing.h@{ProblemNhetmanow/drawing.h}}
+{\ttfamily \#include \char`\"{}include\+\_\+lib.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}algorytm.\+h\char`\"{}}\newline
+\doxysubsection*{Definicje}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{drawing_8h_ac0bb1eedeccf50a5e5767b828ac17bce}{DRAWING\+\_\+H}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Funkcje}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{drawing_8h_a61894c78a3ab1a65c9345ff877c8d2dd}{draw\+\_\+mario}} (ALLEGRO\+\_\+\+BITMAP $\ast$mario, ALLEGRO\+\_\+\+FONT $\ast$font, int \mbox{\hyperlink{algorytm_8h_a617a47c70795bcff659815ad0efd2266}{counter}})
+\item 
+void \mbox{\hyperlink{drawing_8h_a473d01d205309e383b8c4f6dd2d1026f}{draw}} (int $\ast$$\ast$array, int size, ALLEGRO\+\_\+\+BITMAP $\ast$hetman)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Dokumentacja definicji}
+\mbox{\Hypertarget{drawing_8h_ac0bb1eedeccf50a5e5767b828ac17bce}\label{drawing_8h_ac0bb1eedeccf50a5e5767b828ac17bce}} 
+\index{drawing.h@{drawing.h}!DRAWING\_H@{DRAWING\_H}}
+\index{DRAWING\_H@{DRAWING\_H}!drawing.h@{drawing.h}}
+\doxysubsubsection{\texorpdfstring{DRAWING\_H}{DRAWING\_H}}
+{\footnotesize\ttfamily \#define DRAWING\+\_\+H}
+
+
+
+Definicja w linii 3 pliku drawing.\+h.
+
+
+
+\doxysubsection{Dokumentacja funkcji}
+\mbox{\Hypertarget{drawing_8h_a473d01d205309e383b8c4f6dd2d1026f}\label{drawing_8h_a473d01d205309e383b8c4f6dd2d1026f}} 
+\index{drawing.h@{drawing.h}!draw@{draw}}
+\index{draw@{draw}!drawing.h@{drawing.h}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void draw (\begin{DoxyParamCaption}\item[{int $\ast$$\ast$}]{array,  }\item[{int}]{size,  }\item[{ALLEGRO\+\_\+\+BITMAP $\ast$}]{hetman }\end{DoxyParamCaption})}
+
+Funkcja \mbox{\hyperlink{drawing_8c_a473d01d205309e383b8c4f6dd2d1026f}{draw()}} rysuje na ekranie szachownicę oraz hetmanów w odpowiednich miejscach. 
+\begin{DoxyParams}{Parametry}
+{\em array} & dynamiczna tablica dwuwymiarowa reprezentująca szachownicę \\
+\hline
+{\em size} & rozmiar szachownicy \\
+\hline
+{\em hetman} & wskaźnik na bitmapę hetmana \\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii 31 pliku drawing.\+c.
+
+\mbox{\Hypertarget{drawing_8h_a61894c78a3ab1a65c9345ff877c8d2dd}\label{drawing_8h_a61894c78a3ab1a65c9345ff877c8d2dd}} 
+\index{drawing.h@{drawing.h}!draw\_mario@{draw\_mario}}
+\index{draw\_mario@{draw\_mario}!drawing.h@{drawing.h}}
+\doxysubsubsection{\texorpdfstring{draw\_mario()}{draw\_mario()}}
+{\footnotesize\ttfamily void draw\+\_\+mario (\begin{DoxyParamCaption}\item[{ALLEGRO\+\_\+\+BITMAP $\ast$}]{mario,  }\item[{ALLEGRO\+\_\+\+FONT $\ast$}]{font,  }\item[{int}]{counter }\end{DoxyParamCaption})}
+

@@ -1,4 +1,9 @@
+﻿/** @file include_lib.h
+* W pliku include_lib.h zawarte są potrzebne do działania programu biblioteki.
+*/
 #pragma once
+/// @param W zmienna odpowiadająca za szerokość okna aplikacji 
+/// @param H zmienna odpowiadająca za wysokość okna aplikacji
 #ifndef INCLUDE_LIB_H
 #define INCLUDE_LIB_H
 #include <allegro5/allegro.h>

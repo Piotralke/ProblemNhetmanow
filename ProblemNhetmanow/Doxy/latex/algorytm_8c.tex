@@ -1,0 +1,93 @@
+\hypertarget{algorytm_8c}{}\doxysection{Dokumentacja pliku Problem\+Nhetmanow/algorytm.c}
+\label{algorytm_8c}\index{ProblemNhetmanow/algorytm.c@{ProblemNhetmanow/algorytm.c}}
+{\ttfamily \#include \char`\"{}algorytm.\+h\char`\"{}}\newline
+\doxysubsection*{Funkcje}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{algorytm_8c_a2f73df733efbc5dcecee2d4ec4b88b66}{is\+Safe}} (int $\ast$$\ast$board, int row, int col, int size)
+\item 
+bool \mbox{\hyperlink{algorytm_8c_a059298661b2cd1b36eb9fd29aa0af237}{solve\+Nhetman}} (int $\ast$$\ast$board, int col, int size, ALLEGRO\+\_\+\+BITMAP $\ast$hetman, FILE $\ast$file)
+\end{DoxyCompactItemize}
+\doxysubsection*{Zmienne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{algorytm_8c_a61f7b3cbcedea4bae0c663c892d5d07f}{counter}} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+W pliku \mbox{\hyperlink{algorytm_8c}{algorytm.\+c}} znajdują się funkcje odpowiadające za działanie algorytmu. 
+
+\doxysubsection{Dokumentacja funkcji}
+\mbox{\Hypertarget{algorytm_8c_a2f73df733efbc5dcecee2d4ec4b88b66}\label{algorytm_8c_a2f73df733efbc5dcecee2d4ec4b88b66}} 
+\index{algorytm.c@{algorytm.c}!isSafe@{isSafe}}
+\index{isSafe@{isSafe}!algorytm.c@{algorytm.c}}
+\doxysubsubsection{\texorpdfstring{isSafe()}{isSafe()}}
+{\footnotesize\ttfamily bool is\+Safe (\begin{DoxyParamCaption}\item[{int $\ast$$\ast$}]{board,  }\item[{int}]{row,  }\item[{int}]{col,  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+Funkcja jest przywoływana kiedy hetmany są już w kolumnach od 0 do\mbox{[}col\mbox{]} -\/ 1. Więc musimy sprawdzać tylko lewą stronę dla tych hetmanów co atakują. Funkcja sprawdza czy hetman może zostać postawiony na board\mbox{[}row\mbox{]}\mbox{[}col\mbox{]}. Funkcja jest przywoływana kiedy hetmany są już w kolumnach od 0 do \mbox{[}col\mbox{]}-\/1. Więc musimy sprawdzac tylko lewą stronę dla tych hetmanów co atakują. 
+\begin{DoxyParams}{Parametry}
+{\em board} & jest to dynamiczna tablica dwuwymiarowa reprezentująca szachownicę \\
+\hline
+{\em row} & aktualny wiersz szachownicy który jest badany \\
+\hline
+{\em col} & aktualna kolumna szachownicy która jest badana \\
+\hline
+{\em size} & rozmiar szachownicy \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+false w przypadku gdy dane pole nie będzie bezpieczne 
+
+true jeżeli pole jest bezpieczne 
+\end{DoxyReturn}
+
+
+Definicja w linii 21 pliku algorytm.\+c.
+
+\mbox{\Hypertarget{algorytm_8c_a059298661b2cd1b36eb9fd29aa0af237}\label{algorytm_8c_a059298661b2cd1b36eb9fd29aa0af237}} 
+\index{algorytm.c@{algorytm.c}!solveNhetman@{solveNhetman}}
+\index{solveNhetman@{solveNhetman}!algorytm.c@{algorytm.c}}
+\doxysubsubsection{\texorpdfstring{solveNhetman()}{solveNhetman()}}
+{\footnotesize\ttfamily bool solve\+Nhetman (\begin{DoxyParamCaption}\item[{int $\ast$$\ast$}]{board,  }\item[{int}]{col,  }\item[{int}]{size,  }\item[{ALLEGRO\+\_\+\+BITMAP $\ast$}]{hetman,  }\item[{FILE $\ast$}]{file }\end{DoxyParamCaption})}
+
+Funkcja rekurencyjna rozwiazujaca problem N hetmanow. 
+\begin{DoxyParams}{Parametry}
+{\em board} & jest to dynamiczna tablica dwuwymiarowa reprezentująca szachownicę \\
+\hline
+{\em col} & aktualna kolumna szachownicy która jest badana \\
+\hline
+{\em size} & rozmiar szachownicy \\
+\hline
+{\em hetman} & jest to wskaźnik na bitmapę z obrazkiem hetmana w postaci Księżniczki Peach \\
+\hline
+{\em file} & jest to wskaźnik na plik, do którego zapisują się pomyślne rozwiązania \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+true w przypadku jeżeli wszystkie hetmany są ustawione 
+
+false jezeli hetman nie moze zostac postawiony w zadnym wierszu w tej kolumnie 
+\end{DoxyReturn}
+
+
+Definicja w linii 53 pliku algorytm.\+c.
+
+
+
+\doxysubsection{Dokumentacja zmiennych}
+\mbox{\Hypertarget{algorytm_8c_a61f7b3cbcedea4bae0c663c892d5d07f}\label{algorytm_8c_a61f7b3cbcedea4bae0c663c892d5d07f}} 
+\index{algorytm.c@{algorytm.c}!counter@{counter}}
+\index{counter@{counter}!algorytm.c@{algorytm.c}}
+\doxysubsubsection{\texorpdfstring{counter}{counter}}
+{\footnotesize\ttfamily counter = 0}
+
+
+\begin{DoxyParams}{Parametry}
+{\em counter} & to parametr zliczający ilość rozwiązań. \\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii 6 pliku algorytm.\+c.
+

@@ -1,0 +1,41 @@
+\hypertarget{main_8c}{}\doxysection{Dokumentacja pliku Problem\+Nhetmanow/main.c}
+\label{main_8c}\index{ProblemNhetmanow/main.c@{ProblemNhetmanow/main.c}}
+{\ttfamily \#include \char`\"{}include\+\_\+lib.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}handle\+\_\+array.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}drawing.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}algorytm.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}init\+\_\+al.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}errors.\+h\char`\"{}}\newline
+\doxysubsection*{Funkcje}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{main_8c_a2287612f11e6e91b23c9434cd58b325e}{wait\+\_\+for\+\_\+keypress}} ()
+\item 
+int \mbox{\hyperlink{main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+Plik \mbox{\hyperlink{main_8c}{main.\+c}} służy do kontaktu z użytkownikiem w postaci wyboru wielkości szachownicy. Odpowiada również za inicjacje funkcji odpowiadających między innymi za\+: czcionkę, wyświetlanie elementów w tym samego display oraz występowanie błedów. 
+
+\doxysubsection{Dokumentacja funkcji}
+\mbox{\Hypertarget{main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{main.c@{main.c}!main@{main}}
+\index{main@{main}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Funkcja \mbox{\hyperlink{main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main()}} jest główną funkcją programu. Zawarte są w niej najważniejsze inicjacje elementów potrzebnych do działania programów np\+: bitmap. W funkcji zawarta jest pętla while odpowiedzialna za małe menu rozmiaru szachownicy. Po pętli inicjowana jest dynamiczna tablica dwuwymiarowa zależna od wybranego przez użytkownika rozmiaru. Dalej wywoływany jest główny algorytm, a po jego zakończeniu wywoływane są funkcje niszczące i odinstalowywujące. 
+
+Definicja w linii 39 pliku main.\+c.
+
+\mbox{\Hypertarget{main_8c_a2287612f11e6e91b23c9434cd58b325e}\label{main_8c_a2287612f11e6e91b23c9434cd58b325e}} 
+\index{main.c@{main.c}!wait\_for\_keypress@{wait\_for\_keypress}}
+\index{wait\_for\_keypress@{wait\_for\_keypress}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{wait\_for\_keypress()}{wait\_for\_keypress()}}
+{\footnotesize\ttfamily void wait\+\_\+for\+\_\+keypress (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Funkcja \mbox{\hyperlink{main_8c_a2287612f11e6e91b23c9434cd58b325e}{wait\+\_\+for\+\_\+keypress()}} czeka na wciśnięcie dowolnego klawisza przez użytkownika. Jest ona wywoływana na końcu programu po wyświetleniu łącznej liczby rozwiązań. 
+
+Definicja w linii 18 pliku main.\+c.
+

@@ -1,3 +1,4 @@
+
 #pragma once
 #ifndef INIT_AL_H
 #define INIT_AL_H
@@ -6,5 +7,4 @@
 extern int init_fun();
 
 #endif // !INIT_AL_H
-
 

@@ -1,4 +1,14 @@
+﻿/** @file drawing.c
+* Plik drawing.c zawiera implementacje funkcji odpowiedzialnych za wyświetlanie elementów programu na ekranie.
+*/
+
 #include "drawing.h"
+
+/**
+* Funkcja draw_mario() wyświetla na ekranie Mario przedstawiającego ilość rozwiązań.
+* @param mario wskaźnik na bitmapę mario
+* @param font wskaźnik na czcionkę 
+*/
 
 void draw_mario(ALLEGRO_BITMAP* mario, ALLEGRO_FONT* font) 
 {
@@ -8,6 +18,15 @@ void draw_mario(ALLEGRO_BITMAP* mario, ALLEGRO_FONT* font)
 	al_draw_justified_text(font, al_map_rgb(255, 0, 0), 233, 468, 640, 4, 2, "Wcisnij dowolny");
 	al_draw_justified_text(font, al_map_rgb(255, 0, 0), 233, 468, 680, 4, 2, "klawisz by wyjsc");
 }
+
+
+
+/**
+* Funkcja draw() rysuje na ekranie szachownicę oraz hetmanów w odpowiednich miejscach. 
+* @param array dynamiczna tablica dwuwymiarowa reprezentująca szachownicę
+* @param size rozmiar szachownicy 
+* @param hetman wskaźnik na bitmapę hetmana
+*/
 
 void draw(int** array, int size, ALLEGRO_BITMAP* hetman)
 {

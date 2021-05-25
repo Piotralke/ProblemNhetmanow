@@ -1,0 +1,52 @@
+\hypertarget{drawing_8c}{}\doxysection{Dokumentacja pliku Problem\+Nhetmanow/drawing.c}
+\label{drawing_8c}\index{ProblemNhetmanow/drawing.c@{ProblemNhetmanow/drawing.c}}
+{\ttfamily \#include \char`\"{}drawing.\+h\char`\"{}}\newline
+\doxysubsection*{Funkcje}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{drawing_8c_a7adcaa743afdaa4fe65b00ec5e7ede42}{draw\+\_\+mario}} (ALLEGRO\+\_\+\+BITMAP $\ast$mario, ALLEGRO\+\_\+\+FONT $\ast$font)
+\item 
+void \mbox{\hyperlink{drawing_8c_a473d01d205309e383b8c4f6dd2d1026f}{draw}} (int $\ast$$\ast$array, int size, ALLEGRO\+\_\+\+BITMAP $\ast$hetman)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+Plik \mbox{\hyperlink{drawing_8c}{drawing.\+c}} zawiera implementacje funkcji odpowiedzialnych za wyświetlanie elementów programu na ekranie. 
+
+\doxysubsection{Dokumentacja funkcji}
+\mbox{\Hypertarget{drawing_8c_a473d01d205309e383b8c4f6dd2d1026f}\label{drawing_8c_a473d01d205309e383b8c4f6dd2d1026f}} 
+\index{drawing.c@{drawing.c}!draw@{draw}}
+\index{draw@{draw}!drawing.c@{drawing.c}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void draw (\begin{DoxyParamCaption}\item[{int $\ast$$\ast$}]{array,  }\item[{int}]{size,  }\item[{ALLEGRO\+\_\+\+BITMAP $\ast$}]{hetman }\end{DoxyParamCaption})}
+
+Funkcja \mbox{\hyperlink{drawing_8c_a473d01d205309e383b8c4f6dd2d1026f}{draw()}} rysuje na ekranie szachownicę oraz hetmanów w odpowiednich miejscach. 
+\begin{DoxyParams}{Parametry}
+{\em array} & dynamiczna tablica dwuwymiarowa reprezentująca szachownicę \\
+\hline
+{\em size} & rozmiar szachownicy \\
+\hline
+{\em hetman} & wskaźnik na bitmapę hetmana \\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii 31 pliku drawing.\+c.
+
+\mbox{\Hypertarget{drawing_8c_a7adcaa743afdaa4fe65b00ec5e7ede42}\label{drawing_8c_a7adcaa743afdaa4fe65b00ec5e7ede42}} 
+\index{drawing.c@{drawing.c}!draw\_mario@{draw\_mario}}
+\index{draw\_mario@{draw\_mario}!drawing.c@{drawing.c}}
+\doxysubsubsection{\texorpdfstring{draw\_mario()}{draw\_mario()}}
+{\footnotesize\ttfamily void draw\+\_\+mario (\begin{DoxyParamCaption}\item[{ALLEGRO\+\_\+\+BITMAP $\ast$}]{mario,  }\item[{ALLEGRO\+\_\+\+FONT $\ast$}]{font }\end{DoxyParamCaption})}
+
+Funkcja \mbox{\hyperlink{drawing_8c_a7adcaa743afdaa4fe65b00ec5e7ede42}{draw\+\_\+mario()}} wyświetla na ekranie Mario przedstawiającego ilość rozwiązań. 
+\begin{DoxyParams}{Parametry}
+{\em mario} & wskaźnik na bitmapę mario \\
+\hline
+{\em font} & wskaźnik na czcionkę \\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii 13 pliku drawing.\+c.
+
