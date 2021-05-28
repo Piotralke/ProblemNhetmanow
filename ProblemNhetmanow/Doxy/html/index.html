@@ -86,11 +86,11 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><h1><a class="anchor" id="problem_sec"></a>
-Czym jest problem N Hetmanów.</h1>
+1. Czym jest problem N Hetmanów.</h1>
 <p>Jest to problem szachowy i matematyczny, dotyczący rozmieszczenia N hetmanów na szachownicy o wymiarach N × N. Figury muszą być rozłożone w taki sposób, aby wzajemnie się nie szachowały, czyli aby nie znajdowały się w tym samym wierszu, kolumnie, czy ukośnym rzędzie. Obok przedstawione są dwa przykładowe rozwiązania problemu dla szachownicy o wymiarach 5 × 5 oraz 4 × 4.</p>
 <p><img src="1.jpg" alt="" class="inline"/></p>
 <h1><a class="anchor" id="sposob_sec"></a>
-Sposób działania algorytmu</h1>
+2. Sposób działania algorytmu</h1>
 <p>Działanie algorytmu polega na tym, że w przypadku niepowodzenia (w całej następnej kolumnie nie ma żadnego wolnego miejsca) to dany hetman jest przenoszony na następne wolne pole, a jeśli nie mógłby być przesunięty dalej, to sprawdzany jest wcześniejszy hetman. Jeśli udało się przesunąć hetmana to algorytm wznawiał pracę. Po ustawieniu hetmana na planszy nadajemy temu polu wartość 1. Przy poszukiwaniu miejsca dla następnego hetmana sprawdzamy, czy to miejsce jest bezpieczne, poprzez sprawdzanie możliwych ruchów hetmana z danego miejsca w lewą stronę planszy. Poniżej przedstawiamy dwie wizualizacje naszego algorytmu.</p>
 <p><a href="https://youtu.be/qDWjeZj0Hpk">Link do animacji </a></p>
 <p>W poniższej tabeli przedstawiamy wyniki działania algorytmu dla rozmiarów od 1 do 10.</p>
@@ -102,13 +102,16 @@ Sposób działania algorytmu</h1>
  </td><td>1 </td><td>0 </td><td>0 </td><td>2 </td><td>10 </td><td>4 </td><td>40 </td><td>92 </td><td>352 </td><td>724  </td></tr>
 </table>
 <h1><a class="anchor" id="grafika_sec"></a>
-Szata graficzna projektu</h1>
+3. Szata graficzna projektu</h1>
 <p>Implementacja biblioteki graficznej Allegro poszła po naszej myśli. Teraz na pierwszym ekranie wyświetla nam się mini menu gdzie za pomocą strzałek wybieramy rozmiar szachownicy. Następnie w oknie wyświetla się szachownica na której pokazuje się cała praca algorytmu. Hetmani w postaci księżniczki Peach przechodzą po wszystkich polach szachownicy. Na koniec wyskakuje sam Mario, który wyświetla liczbę wszystkich rozwiązań.</p>
 <p><img src="rozmiar.png" alt="" class="inline"/> <img src="szachownica.png" alt="" class="inline"/> <img src="mario.png" alt="" class="inline"/></p>
 <h1><a class="anchor" id="zapis_sec"></a>
-Zapis rozwiązań do pliku</h1>
+4. Zapis rozwiązań do pliku</h1>
 <p>Aktualnie nasz program podczas pracy zapisuje wszystkie możliwe rozwiązania do pliku w postaci 0 i 1 gdzie 1 oznacza hetmana, a 0 puste pole.</p>
-<p><img src="rozwiazania.png" alt="" class="inline"/> </p>
+<p><img src="rozwiazania.png" alt="" class="inline"/></p>
+<h1><a class="anchor" id="podsumowanie_sec"></a>
+5. Podsumowanie i podzial pracy</h1>
+<p>Udalo nam sie zrobic wszystko co zaplanowalismy na nasz projekt. Jestesmy zadowoleni z efektu jaki udalo nam sie uzyskac. Z reguly wszyscy pracowalismy wspolnie nad projektem, kiedy nie moglismy znalezc rozwiazania, robilismy "burze mozgow" jak za dany problem sie zabrac. Uwazamy, ze wszyscy wlozylismy do projektu cale nasze serca i nikt nie odstaje w udziale wykonanej pracy. Nasz podzial pracy w formie procentowej: Piotr Dziewiecki -33,(3)% Jan Dyrdul - 33,(3)% Figura Filip - 33,(3)% </p>
 </div></div><!-- PageDoc -->
 </div><!-- contents -->
 </div><!-- doc-content -->

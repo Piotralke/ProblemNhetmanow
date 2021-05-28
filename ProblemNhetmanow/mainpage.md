@@ -2,7 +2,7 @@
 ! \mainpage Projekt Problem N Hetmanów 
 
  
- \section problem_sec Czym jest problem N Hetmanów.
+ \section problem_sec 1. Czym jest problem N Hetmanów.
  
 Jest to problem szachowy i matematyczny, dotyczący rozmieszczenia N hetmanów na szachownicy o wymiarach N × N. 
 Figury muszą być rozłożone w taki sposób, aby wzajemnie się nie szachowały, czyli aby nie znajdowały się w tym samym wierszu, kolumnie, czy ukośnym rzędzie. 
@@ -11,7 +11,7 @@ Obok przedstawione są dwa przykładowe rozwiązania problemu dla szachownicy o 
  ![](1.jpg)
  
 
- \section sposob_sec Sposób działania algorytmu
+ \section sposob_sec 2. Sposób działania algorytmu
 
  Działanie algorytmu polega na tym, że w przypadku niepowodzenia (w całej następnej kolumnie nie ma żadnego wolnego miejsca) to dany hetman jest przenoszony na następne wolne pole, a jeśli nie mógłby być przesunięty dalej, to sprawdzany jest wcześniejszy hetman. 
  Jeśli udało się przesunąć hetmana to algorytm wznawiał pracę. Po ustawieniu hetmana na planszy nadajemy temu polu wartość 1. 
@@ -32,7 +32,7 @@ Obok przedstawione są dwa przykładowe rozwiązania problemu dla szachownicy o 
    </tr>
 </table>
 
- \section grafika_sec Szata graficzna projektu 
+ \section grafika_sec 3. Szata graficzna projektu 
 
  Implementacja biblioteki graficznej Allegro poszła po naszej myśli. 
  Teraz na pierwszym ekranie wyświetla nam się mini menu gdzie za pomocą strzałek wybieramy rozmiar szachownicy. 
@@ -43,8 +43,14 @@ Obok przedstawione są dwa przykładowe rozwiązania problemu dla szachownicy o 
   ![](rozmiar.png) ![](szachownica.png)  ![](mario.png)
 
 
- \section zapis_sec Zapis rozwiązań do pliku 
+ \section zapis_sec 4. Zapis rozwiązań do pliku 
  Aktualnie nasz program podczas pracy zapisuje wszystkie możliwe rozwiązania do pliku w postaci 0 i 1 gdzie 1 oznacza hetmana, a 0 puste pole.
 
  ![](rozwiazania.png)
- 
+
+  \section podsumowanie_sec 5. Podsumowanie i podzial pracy
+  Udalo nam sie zrobic wszystko co zaplanowalismy na nasz projekt. 
+  Jestesmy zadowoleni z efektu jaki udalo nam sie uzyskac. 
+  Z reguly wszyscy pracowalismy wspolnie nad projektem, kiedy nie moglismy znalezc rozwiazania, robilismy "burze mozgow" jak za dany problem sie zabrac. 
+  Uwazamy, ze wszyscy wlozylismy do projektu cale nasze serca i nikt nie odstaje w udziale wykonanej pracy. 
+  Nasz podzial pracy w formie procentowej: Piotr Dziewiecki -33,(3)% Jan Dyrdul - 33,(3)% Figura Filip - 33,(3)%

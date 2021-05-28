@@ -25,10 +25,11 @@
 var NAVTREE =
 [
   [ "Projekt Problem N Hetmanów", "index.html", [
-    [ "Czym jest problem N Hetmanów.", "index.html#problem_sec", null ],
-    [ "Sposób działania algorytmu", "index.html#sposob_sec", null ],
-    [ "Szata graficzna projektu", "index.html#grafika_sec", null ],
-    [ "Zapis rozwiązań do pliku", "index.html#zapis_sec", null ],
+    [ "1. Czym jest problem N Hetmanów.", "index.html#problem_sec", null ],
+    [ "2. Sposób działania algorytmu", "index.html#sposob_sec", null ],
+    [ "3. Szata graficzna projektu", "index.html#grafika_sec", null ],
+    [ "4. Zapis rozwiązań do pliku", "index.html#zapis_sec", null ],
+    [ "5. Podsumowanie i podzial pracy", "index.html#podsumowanie_sec", null ],
     [ "Pliki", "files.html", [
       [ "Lista plików", "files.html", "files_dup" ],
       [ "Globalne", "globals.html", [
